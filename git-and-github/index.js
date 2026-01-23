@@ -5,5 +5,3 @@ console.log(a);
 
 let b  = "singh bisht";
 console.log(b);
-
-// bug added 
