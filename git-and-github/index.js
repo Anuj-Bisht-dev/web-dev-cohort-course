@@ -16,3 +16,7 @@ function sub(a, b) {
         console.log(error.message);
     }
 }
+
+function multiply(a, b) {
+    return a * b;
+}
