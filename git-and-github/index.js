@@ -28,4 +28,6 @@ function multiply(a, b) {
     }
 }
 
-multiply(2, 30)
+multiply(2, 30);
+multiply(0, 4);
+
