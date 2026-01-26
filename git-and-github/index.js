@@ -12,7 +12,22 @@ function sub(a, b) {
             throw new Error("the denominator cannot be zero");
         }
         return a - b;
-    } catch {
-        console.log(error.message);
+    } catch(error){
+        console.log(error);
     }
 }
+
+function multiply(a, b) {
+    try{
+        if((a && b) > 0){
+            throw new Error("Both value cannot be zero at a time");
+        }
+        return a * b;
+    }catch(error){
+        console.log(error);
+    }
+}
+
+multiply(2, 30);
+multiply(0, 4);
+
