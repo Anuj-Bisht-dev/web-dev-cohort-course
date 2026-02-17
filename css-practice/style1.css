@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  /* box-sizing: content-box; */
+}
+
+body{
+    background-color: #1d1d1d;
+    color: #ffffff;
+}
+
+#parent{
+    border: 5px solid blanchedalmond;
+    width: 80vw;
+    height: 90vh;
+    padding: 20px;
+    display: flex;
+    /* justify-content: center; works on main exis */
+    /* flex-direction: column; control the main exis direction */
+    /* align-items: center; works on cross exis */
+    /* align-items: stretch; by default it is on stretch mode */
+    gap: 10px; /* space between the child elements */
+}
+
+.child {
+  font-size: 30px;
+  border: 5px solid skyblue;
+  height: 100px;
+  width: 120px;
+}
+
+/* flex properties that works on child elements */
+.child-1{
+    flex: 1;
+    /* align-self: flex-end; */
+    /* works on child 1 only same as justify-self */
+
+    /* order: 1; */
+    /* default priority is 0 and prority decreases when nuber increases */
+}
+
+.child-2{
+    flex: 2; 
+    /* flex 2 have 2x times space than child 1 */
+}
+
+.child-5{
+
+    order: 2;
+}
