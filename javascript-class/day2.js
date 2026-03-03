@@ -68,3 +68,48 @@
 // }
 
 
+// data structures
+// array
+let fruits = ["apple", "tarbooj", "kela", true, "santra", 1];
+
+// functions on array
+
+// console.log(fruits.push("kiwi"));
+// console.log(fruits.length);
+// console.log(fruits.pop());
+// console.log(fruits.shift());
+// console.log(fruits.unshift("aaddu"));
+// console.log(fruits.includes("aam"));
+
+// console.log(fruits);
+
+// console.log(fruits.includes("aaddu"));
+// console.log(fruits.slice(2, 5));
+// console.log(fruits.indexOf("harish"));  
+
+
+// high order function - a high order function is a func which takes anothere funciton as a parameter
+
+// function iAmAFuncion(ekFunction) { // it takes an another fucntion as a parameter
+//     return ekFunction() + 100;
+// }
+
+// function kuchAddKarenBhai(){
+//     return 10;
+// }
+
+// console.log(iAmAFuncion(kuchAddKarenBhai));
+
+// application of high-order functions
+
+// we want to do loop of an array
+// for (let i = 0; i < fruits.length; i++) {
+//     const element = fruits[i];
+//     console.log(element);
+
+// }
+
+
+fruits.forEach((element) => {
+    console.log(element);
+});
