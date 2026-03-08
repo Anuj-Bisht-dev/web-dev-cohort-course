@@ -46,6 +46,8 @@ Object.seal(catalogEntry);
 
 const secureArtificats = { name: "Ruby Pendant" };
 
+
+// special way to access more properties on key:value in object
 Object.defineProperty(secureArtificats, "catelogId", {
   value: "SEC-999",
   writable: false,
@@ -63,7 +65,6 @@ for (const [key, value] of Object.entries(secureArtificats)) {
 
 const desc = Object.getOwnPropertyDescriptor(secureArtificats, "name");
 console.log(desc);
-
 
 // loop key points
 // 
