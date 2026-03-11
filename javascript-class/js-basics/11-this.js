@@ -64,7 +64,7 @@ myCollage.studentPlacement();
 const friends = {
     name: "ayan",
     party() {
-        return (`${this.name} is giving a biryani party in eid`);
+        return (`${this.name} is giving a biryani party in eid`); greet2.greetings()
     }
 }
 
