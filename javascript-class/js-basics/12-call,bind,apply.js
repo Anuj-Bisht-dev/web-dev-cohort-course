@@ -7,10 +7,10 @@
 // they are used to over-write the default this
 
 function cookDishes(ingredients, dish) {
-    return (`${this.name} is using ${ingredients} ingredient and using ${dish}.`);
+    return (`${this.name} of age ${this.age} is using ${ingredients} ingredient and using ${dish}.`);
 }
 
-const ayanKitchen = { name: "ayan ji's kitchen" };
+const ayanKitchen = { name: "ayan ji's kitchen", age: 21 };
 const guptaKitchen = { name: "gupta ji's kitchen" };
 
 // using call

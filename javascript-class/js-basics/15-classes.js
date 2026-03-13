@@ -1,3 +1,4 @@
+// classes are just synthetical suagar on function
 class Circketer {
     constructor(name, role) {
         this.name = name;
