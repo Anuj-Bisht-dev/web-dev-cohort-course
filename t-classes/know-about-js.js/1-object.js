@@ -35,12 +35,12 @@ let sonnet = {
 
 // expression value as prop names
 const input = "company"
-console.log(sonnet[input]);
+// console.log(sonnet[input]);
 
 
 // property short-hand
 function buyLaptop(name, price) {
-    console.log("amiri aa rahi hai bhai");
+    // console.log("amiri aa rahi hai bhai");
     return {
         brand: "Apple",
         // name: name,
@@ -61,9 +61,9 @@ let myMac = buyLaptop("M5 Air", 99_999);
 
 // looping object for..in
 
-for (let keys in myMac) {
-    console.log(`${keys}: ${myMac[keys]}`);
-}
+// for (let keys in myMac) {
+//     console.log(`${keys}: ${myMac[keys]}`);
+// }
 
 
 // objects are ordered in diff. fashion
@@ -89,6 +89,71 @@ let codes = {
     "+52": "Maxico",
 }
 
-console.log(codes); // it prints obj are sorted (ascending order) 
+// console.log(codes); // it prints obj are sorted (ascending order) 
 
 
+// premitive always copy as value
+
+let like = "cbum";
+let love = like; // cbum
+// console.log(love);
+
+// for intern
+
+like = "ramon-dino";
+// console.log(love);
+
+
+// objs are stored and copy by ref
+
+let athelet = {
+    name: "lee-priest",
+    country: "austalia",
+    profession: "bodybuilder",
+}
+
+let atheletObj = athelet;
+// console.log(atheletObj);
+
+athelet.country = "america";
+// console.log(atheletObj);
+
+
+// const can't be then how we modify obj
+
+const avangers = {
+    name: "iron-man 3000",
+}
+
+avangers.name = "hulk gama"; // here we modify obj not ref
+// console.log(avangers);
+
+// copy obj
+// let clone = {};
+
+// for (let key in avangers) {
+//     clone[key] = avangers[key];
+// }
+
+
+// Object.assign(dest, ...sources);
+
+// let clone = Object.assign({}, avangers);
+
+// console.log(clone);
+
+
+// deep copy
+const nestedObj = {
+    name: "andrei-due",
+    country: "romania",
+    profession: {
+        one: "influencer",
+        two: "bodybuilder",
+        three: "brand-promoter",
+        four: "modeling",
+    },
+}
+
+const deepClone = structuredClone(nestedObj);
+// console.log(deepClone);
