@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<body>
+    <button id="expButton">Click Me</button>
+</body>
+<script defer>
+    let buttonRef = document.getElementById("expButton");
+    buttonRef.style.backgroundColor = "purple";
+
+    // function saveDataInDb() {
+    //     console.log("data is saved in DB");
+    // }
+
+    // problem - mutiple events
+    /*
+    initially the onclick
+    button.onclick = {
+        onclick: undefined;
+    }
+
+    buttonRef.onclick = function (){
+        console.log("ek baar chalgaya")
+    }
+
+    buttonRef.onclick = function (){
+        console.log("dusri baar chal gaya par override kar diya.."); // over-rided the upper function
+    }
+
+    we cannot able to set multiple function on an single event it will be overrided as above
+    */
+
+    // so, we use a efficient way (addEventListener) can handle multiple fun on a single event without overriding the other
+    // buttonRef.addEventListener("click", saveDataInDb);
+    // buttonRef.addEventListener("click", () => { console.log("namaste india..") });
+
+
+    // --- Imp. information (the upper eventListner always uses memory and stored it ref)
+    // so, we use the below code for optimze usage
+    /*
+        const btnOnClickHandling = function () {
+            console.log('click is done');
+        }
+        buttonRef.addEventListener("click", btnOnClickHandling);
+        buttonRef.removeEventListener("click", btnOnClickHandling); // it removes the this ref stored in memory...
+    */
+
+    // on time click working btn
+
+    buttonRef.addEventListener('click', btnOnClickHandling);
+    function btnOnClickHandling() {
+        console.log("this will click once");
+        buttonRef.removeEventListener("click", btnOnClickHandling);
+    }
+
+
+
+</script>
+
+</html>

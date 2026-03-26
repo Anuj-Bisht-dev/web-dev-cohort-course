@@ -6,17 +6,26 @@ const orders = [
   { dish: "Truffle Risotto", price: 18, spicy: false, qty: 1 },
 ];
 
+// array.forEach((element, index, array)=> { }); 
+// returns undefine
 const myData = orders.forEach((order, index) => {
-  console.log(`  #${index + 1} : ${order.qty}x ${order.dish}`);
+  console.log(`#${index + 1} : ${order.qty}x ${order.dish}`);
 });
 // console.log(myData);
-//
+
+
+// array.map((element, index, array)=> { });
+//returns new Array
 const receiptLines = orders.map((o) => `${o.dish}: $${o.price * o.qty}`);
 console.log(receiptLines);
 
+// array.filter((element, index, array)=> { });
+// returns new Array
 const spicyOrders = orders.filter((o) => o.spicy);
 console.log(spicyOrders);
 
+// array.reduce((accumulator, currentValue, index, array)=> { }, initialValue)
+// returns (nothing)/ anyvalue which we want to
 const totalRevenue = orders.reduce((sum, order) => {
   return sum + order.qty * order.price;
 }, 0);
@@ -30,6 +39,7 @@ const grouped = orders.reduce(
     acc[category].push(order.dish);
     return acc;
   },
+
   { spicy: [], mild: [] },
 );
 
@@ -48,7 +58,7 @@ const kitchenOrders = [
   { dish: "Ghost Pepper Soup", price: 15, spicy: true, qty: 1 },
 ];
 
-data | (v1=true, v2=false, v3=true)
+data | (v1 = true, v2 = false, v3 = true)
 
 const mildReport = kitchenOrders
   .filter((order) => !order.spicy)
