@@ -38,10 +38,9 @@
     buttonRef.onclick = function (){
         console.log("dusri baar chal gaya par override kar diya.."); // over-rided the upper function
     }
-
-    we cannot able to set multiple function on an single event it will be overrided as above
     */
-
+   
+    // we cannot able to set multiple function on an single event it will be overrided as above
     // so, we use a efficient way (addEventListener) can handle multiple fun on a single event without overriding the other
     // buttonRef.addEventListener("click", saveDataInDb);
     // buttonRef.addEventListener("click", () => { console.log("namaste india..") });
@@ -57,16 +56,25 @@
         buttonRef.removeEventListener("click", btnOnClickHandling); // it removes the this ref stored in memory...
     */
 
-    // on time click working btn
 
+    // on time click working btn
+    /*
     buttonRef.addEventListener('click', btnOnClickHandling);
     function btnOnClickHandling() {
         console.log("this will click once");
         buttonRef.removeEventListener("click", btnOnClickHandling);
     }
+    */
 
-
-
+    // remove button onclick
+    /*
+    buttonRef.addEventListener("click", () => {
+        buttonRef.remove();
+        console.log("btn removed");
+        buttonRef = null; // addition line of code for optimization
+        // it removes the ref we were using and free up the memory
+    });
+    */
 </script>
 
 </html>
