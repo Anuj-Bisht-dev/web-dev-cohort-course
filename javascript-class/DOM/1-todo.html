@@ -159,7 +159,7 @@
         let response = fetch("https://api.freeapi.app/api/v1/public/quotes", {
             method: "GET",
         });
-        
+
         response.then((response) => response.json())
             .then((data) => {
                 for (let i = 0; i < data.data.data.length; i++) {
@@ -182,10 +182,8 @@
         userOutputSectionList.innerText = inputBoxValue;
         userOutputSection.appendChild(userOutputSectionList);
         userInputBox.value = "";
-        
-    });
 
-    
+    });
 
 </script>
 
