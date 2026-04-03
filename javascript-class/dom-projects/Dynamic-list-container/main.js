@@ -17,13 +17,18 @@ function createAListItem() {
 
     createARemoveBtn.addEventListener("click", () => {
         createAList.remove();
-    })
+    });
+
+    createAList.addEventListener("dblclick", () => {
+        createAList.textContent = prompt();
+        createAList.appendChild(createARemoveBtn);
+    });
 
     createAList.appendChild(createARemoveBtn)
     list.appendChild(createAList);
 
-    input.value = ""
-}
+    input.value = "";
 
+}
 
 addBtn.addEventListener("click", createAListItem)
