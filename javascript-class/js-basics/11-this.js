@@ -38,7 +38,7 @@ const schoolStudents = {
 schoolStudents.stdInfo();
 
 
-// a regular nested fun doesn't inherit this
+// a regular nested fn doesn't inherit this
 const myCollage = {
     students: "lallu",
     studentPlacement() {
