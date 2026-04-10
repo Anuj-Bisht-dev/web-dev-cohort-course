@@ -9,8 +9,6 @@
 
 type UserID = string
 
-
-
 interface User {
     id: UserID
     fname: string
