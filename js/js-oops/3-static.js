@@ -19,7 +19,7 @@ class User {
 
     set name(val) {
         if (val.length < 3) {
-            console.log("choota hai bhai bahut naam naam!");
+            console.log("choota hai bhai bahut naam!");
             return;
         }
         this._name = val;
