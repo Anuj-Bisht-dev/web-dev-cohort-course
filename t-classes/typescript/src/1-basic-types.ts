@@ -18,13 +18,13 @@ let userInfo: unknown = 'k-2/c magal bazar, patna';
 
 // unknown is mostly uses for type narrowing
 function typeNarrowing(userInfo:unknown){
-    if(userInfo === 'string'){
+    if(typeof userInfo === 'string'){
         console.log('this might be address or name');
     }
-    if(userInfo === 'number'){
+    if(typeof userInfo === 'number'){
         console.log('this might be it\'s phone number or salary');
     }
-    if(userInfo === 'boolean'){
+    if(typeof userInfo === 'boolean'){
         console.log('this might be the status of the user');
     }
     // so on
